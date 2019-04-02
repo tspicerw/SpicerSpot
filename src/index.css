@@ -4,8 +4,28 @@ html {
 
 body {
   height: 100%;
+  overflow: hidden;
 }
 
 .App {
   height: 100%;
+  background-color: #222;
+}
+
+#root {
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  top: 83px;
+  height: 100vh;
+  overflow: hidden;
+}
+.movie_section {
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.movie_section h4 {
+  padding: 2rem;
 }

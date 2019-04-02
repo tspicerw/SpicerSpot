@@ -14,13 +14,17 @@ const slideDrawer = props => {
       </header>
       <ul>
         <li>
-          <a href="/">Twitch</a>
+          <a href="https://www.twitch.tv/ncg_terry2989">Twitch</a>
         </li>
         <li>
-          <a href="/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/terrence-spicer-williams-250570ba/">
+            LinkedIn
+          </a>
         </li>
         <li>
-          <a href="/">Facebook</a>
+          <a href="https://www.facebook.com/profile.php?id=100004520295992">
+            Facebook
+          </a>
         </li>
       </ul>
     </nav>

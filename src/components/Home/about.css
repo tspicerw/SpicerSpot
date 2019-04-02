@@ -1,0 +1,33 @@
+.about-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageDiv {
+  position: relative;
+  height: 50vh;
+  width: 22vw;
+  margin: 0 auto;
+}
+
+.imageDiv img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.imageDiv img.top:hover {
+  opacity: 0;
+}
+
+.descDiv {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
