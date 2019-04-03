@@ -29,3 +29,42 @@ body {
 .movie_section h4 {
   padding: 2rem;
 }
+
+.form-wrapper {
+  width: 20%;
+  height: 55%;
+  position: relative;
+  top: 10%;
+  left: 35%;
+  border: 2px solid #cb7b96;
+  border-radius: 40px;
+  padding: 55px;
+}
+
+form > input[type="text"],
+label {
+  width: 100%;
+  padding: 5px;
+
+  width: 100%;
+}
+
+form > ul {
+  list-style: none;
+}
+
+.form-input {
+  width: 100% !important;
+}
+
+form > input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

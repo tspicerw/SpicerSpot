@@ -5,7 +5,8 @@ import "./components/Toolbar/Toolbar.css";
 import "./index.css";
 import Overlay from "./components/Overlay/Overlay.jsx";
 import MovieList from "./components/Movie/Movie_list.jsx";
-import Contact from "./components/Contact/Contact.jsx";
+//import Contact from "./components/Contact/Contact.jsx";
+import Form from "./components/NetlifyForm/Form.jsx";
 import About from "./components/Home/about.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MovieDetail from "./components/Movie/MovieDetail.jsx";
@@ -40,8 +41,9 @@ class App extends Component {
           {overlay}
 
           <Switch>
+            <Route exact path="/" component={About} />
             <Route path="/About" component={About} />
-            <Route path="/Contact" component={Contact} />
+            <Route path="/Contact" component={Form} />
             <Route path="/Movielist" component={MovieList} />
             <Route path="/:id" component={MovieDetail} />
           </Switch>
