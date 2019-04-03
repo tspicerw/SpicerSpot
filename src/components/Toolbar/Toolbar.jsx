@@ -26,7 +26,7 @@ const toolbar = props => (
             <Link to="/Movielist">Movies</Link>
           </li>
           <li>
-            <Link to="/Contact">Contact</Link>
+            <Link to="/Form">Contact</Link>
           </li>
         </ul>
       </div>
