@@ -6,9 +6,9 @@
 
 .imageDiv {
   position: relative;
-  height: 50vh;
-  width: 22vw;
-  margin: 0 auto;
+  height: 40vh;
+  width: 15vw;
+  margin: 15px auto;
 }
 
 .imageDiv img {
@@ -30,4 +30,7 @@
   width: 50%;
   margin: 0 auto;
   text-align: left;
+  border: 2px solid #cb7b96;
+  border-radius: 40px;
+  padding: 55px;
 }

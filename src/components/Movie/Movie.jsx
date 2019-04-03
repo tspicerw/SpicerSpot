@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const poster_path = "https://image.tmdb.org/t/p/w154";
+
 const Movie = ({ movie }) => (
   <div>
     <Link to={`/${movie.id}`}>

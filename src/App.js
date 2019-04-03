@@ -9,7 +9,11 @@ import MovieList from "./components/Movie/Movie_list.jsx";
 import Form from "./components/NetlifyForm/Form.jsx";
 import About from "./components/Home/about.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import MovieDetail from "./components/Movie/MovieDetail.jsx";
+import rootReducer from "./components/Reducers/rootReducer.js";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 class App extends Component {
   state = {
@@ -33,22 +37,25 @@ class App extends Component {
       overlay = <Overlay click={this.overlayClickHandler} />;
     }
 
+    const store = createStore(rootReducer, {}, composeWithDevTools());
     return (
-      <Router>
-        <div className="App">
-          <Toolbar drawerClickhandler={this.drawerToggleClickHandler} />
-          <SlideDrawer show={this.state.slideDrawerOpen} />
-          {overlay}
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Toolbar drawerClickhandler={this.drawerToggleClickHandler} />
+            <SlideDrawer show={this.state.slideDrawerOpen} />
+            {overlay}
 
-          <Switch>
-            <Route exact path="/" component={About} />
-            <Route path="/About" component={About} />
-            <Route path="/Form" component={Form} />
-            <Route path="/Movielist" component={MovieList} />
-            <Route path="/:id" component={MovieDetail} />
-          </Switch>
-        </div>
-      </Router>
+            <Switch>
+              <Route exact path="/" component={About} />
+              <Route path="/About" component={About} />
+              <Route path="/Form" component={Form} />
+              <Route path="/Movielist" component={MovieList} />
+              <Route path="/:id" component={MovieDetail} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }

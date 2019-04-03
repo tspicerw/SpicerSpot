@@ -1,27 +1,68 @@
-<form method="post" action="POST" data-netlify="true">
-  <div class="fields">
-    <div class="field">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" />
-    </div>
-    <div class="field">
-      <label for="email">Email</label>
-      <input type="text" name="email" id="email" />
-    </div>
-    <div class="field">
-      <label for="file">Upload Job Description</label>
-      <input type="file" name="myfile" id="myfile" />
-    </div>
-    <div class="field">
-      <div data-netlify-recaptch="true"></div>
-      >
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea name="message" id="message" rows="3"></textarea>
-    </div>
-  </div>
-  <ul class="actions">
-    <li><input type="submit" value="Send Message" /></li>
-  </ul>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <form name="hidden-contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="netlify-hidden-form" value="contact" />
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+
+          <label for="name">Name</label>
+          <input className="form-input" type="text" name="name" id="name" />
+          <label for="email">Email</label>
+          <input className="form-input" type="text" name="email" id="email" />
+          <label for="file">Upload Job Description</label>
+          <input type="file" name="myfile" id="myfile" />
+          <label for="message">Message</label>
+          <textarea
+            className="form-input"
+            name="message"
+            id="message"
+            rows="3"  ></textarea>
+         
+
+        <ul className="actions">
+          <li>
+            <input type="submit" value="Send Message" />
+          </li>
+        </ul>
+    </form>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <div className="form-wrapper">
+      <input type="hidden" name="netlify-hidden-form" value="contact" />
+        <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+
+            <label for="name">Name</label>
+            <input className="form-input" type="text" name="name" id="name" />
+            <label for="email">Email</label>
+            <input className="form-input" type="text" name="email" id="email" />
+            <label for="file">Upload Job Description</label>
+            <input type="file" name="myfile" id="myfile" />
+            <label for="message">Message</label>
+            <textarea
+              className="form-input"
+              name="message"
+              id="message"
+              rows="3"
+            />
+
+          <ul className="actions">
+            <li>
+              <input type="submit" value="Send Message" />
+            </li>
+          </ul>
+        </form>
+      </div>
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>

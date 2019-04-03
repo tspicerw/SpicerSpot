@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Movie from "./Movie.jsx";
 import styled from "styled-components";
+import Toggle from "../MovieToggle/Toggle";
 
 class MovieList extends Component {
   state = {
@@ -24,6 +25,7 @@ class MovieList extends Component {
   render() {
     return (
       <div className="movie_section">
+        <Toggle />
         <h4>
           Returns a list of movies from the Movie DB API. Click any of the
           individual movie links to view their details page.
