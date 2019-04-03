@@ -4,7 +4,7 @@ class NetlifyForm extends Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form method="post" action="POST" data-netlify="true">
+        <form action="POST" data-netlify="true">
           <div className="fields">
             <div className="field">
               <label for="name">Name</label>
@@ -24,7 +24,7 @@ class NetlifyForm extends Component {
               <input type="file" name="myfile" id="myfile" />
             </div>
             <div className="field">
-              <div data-netlify-recaptch="true" />
+              <div data-netlify-recaptcha="true" />
             </div>
             <div className="field">
               <label for="message">Message</label>
