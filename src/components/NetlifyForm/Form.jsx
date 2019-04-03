@@ -4,7 +4,7 @@ class NetlifyForm extends Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form action="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true">
           <div className="fields">
             <div className="field">
               <label for="name">Name</label>
